@@ -1,3 +1,18 @@
+# Whaleback Webcam
+## Startup
+```
+
+$ cd motion/
+$ ./run_motion.sh
+```
+
+## View output on local host
+Visit `http://localhost:8081/` to see the webcam stream.
+
+## File output
+The output file is always stored at `motion/fig/whaleback_snowcam.jpg`
+
+# Setup
 
 # Enable the motion package and stream to http://localhost:8081/
 ```
