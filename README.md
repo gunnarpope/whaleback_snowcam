@@ -99,3 +99,10 @@ pi@snowcam:~/Desktop $
 ```
 
 
+# Disable sleep mode
+xset -dpms
+
+# Simultaneous connections
+Only 6 simulteneous connections to localhost:8081 can be made that stream photos.
+
+
