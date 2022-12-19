@@ -10,6 +10,8 @@
 
 if __name__ == "__main__":
     import boto3
+    import logging
+    from time import sleep
 
     # Create an S3 client
     s3 = boto3.client('s3')
@@ -20,5 +22,12 @@ if __name__ == "__main__":
     
     # Uploads the given file using a managed uploader, which will split up large
     # files automatically and upload parts in parallel.
-    s3.upload_file(filename, bucket_name, filename)
+    while(True):
+#        try: 
+        s3.upload_file(filename, bucket_name, object_name)
+        logging.info('Success pushing snowcam file to s3 bucket.')
+        # logging.warning('Unsuccessful file upload to s3 bucket.')
+
+        sleep(5)
+
 
