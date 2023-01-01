@@ -24,7 +24,8 @@ if __name__ == "__main__":
     # files automatically and upload parts in parallel.
     while(True):
 
-        filename = 'src/fig/whaleback_snowcam.jpg'
+        ts = datetime.datetime.now().strftime("%Y/%m/%d/%H%M%S")
+        filename = f'src/fig/{ts}.jpg'
         s3.upload_file(filename, bucket_name, object_name)
         logging.info('Success pushing snowcam file to s3 bucket.')
 
